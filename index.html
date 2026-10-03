@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Muebles y Más by Cristina</title>
+
+<style>
+
+/* ==============================
+   ESTILOS GENERALES
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f8f5f1;
+    color: #332821;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* ==============================
+   MENU
+================================ */
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255,255,255,0.96);
+    box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+}
+
+nav {
+    height: 85px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 115px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.menu a {
+    font-weight: bold;
+    color: #49372c;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #9a6946;
+}
+
+
+/* ==============================
+   INICIO
+================================ */
+
+.inicio {
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            rgba(50,35,25,0.65),
+            rgba(50,35,25,0.45)
+        ),
+        url("sala-2.jpeg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+
+    color: white;
+    padding-top: 85px;
+}
+
+.inicio-contenido {
+    max-width: 720px;
+}
+
+.inicio small {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #e5c5a7;
+}
+
+.inicio h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(50px, 7vw, 90px);
+    line-height: 1;
+    margin: 20px 0;
+}
+
+.inicio h1 span {
+    color: #d6a477;
+}
+
+.inicio p {
+    font-size: 19px;
+    max-width: 650px;
+    margin-bottom: 30px;
+}
+
+.botones {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.boton {
+    padding: 14px 25px;
+    font-weight: bold;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.boton:hover {
+    transform: translateY(-3px);
+}
+
+.boton-principal {
+    background: #9a6946;
+    color: white;
+}
+
+.boton-blanco {
+    background: white;
+    color: #3d2d23;
+}
+
+
+/* ==============================
+   SECCIONES
+================================ */
+
+section {
+    padding: 90px 0;
+}
+
+.titulo {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 50px;
+}
+
+.titulo small {
+    color: #9a6946;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.titulo h2 {
+    font-family: Georgia, serif;
+    font-size: 42px;
+    margin: 12px 0;
+}
+
+.titulo p {
+    color: #706860;
+}
+
+
+/* ==============================
+   NOSOTROS
+================================ */
+
+.nosotros {
+    background: white;
+}
+
+.nosotros-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.nosotros-imagen img {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+}
+
+.nosotros-texto small {
+    color: #9a6946;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.nosotros-texto h2 {
+    font-family: Georgia, serif;
+    font-size: 42px;
+    margin: 15px 0 20px;
+}
+
+.nosotros-texto p {
+    color: #68615c;
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+
+.fecha {
+    margin-top: 20px;
+    display: inline-block;
+    background: #5d3d2b;
+    color: white;
+    padding: 15px 25px;
+}
+
+.fecha strong {
+    font-family: Georgia, serif;
+    font-size: 30px;
+}
+
+
+/* ==============================
+   PRODUCTOS
+================================ */
+
+.productos {
+    background: #eee5da;
+}
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.producto {
+    background: white;
+    box-shadow: 0 8px 25px rgba(70,45,30,0.12);
+    transition: 0.3s;
+}
+
+.producto:hover {
+    transform: translateY(-8px);
+}
+
+.producto-imagen {
+    height: 330px;
+    overflow: hidden;
+}
+
+.producto-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.producto:hover img {
+    transform: scale(1.05);
+}
+
+.producto-contenido {
+    padding: 25px;
+}
+
+.producto-contenido h3 {
+    font-family: Georgia, serif;
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.producto-contenido p {
+    color: #6d6660;
+}
+
+
+/* ==============================
+   DIFERENCIA
+================================ */
+
+.diferencia {
+    background: #5d3d2b;
+    color: white;
+}
+
+.diferencia-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+}
+
+.diferencia-item {
+    padding: 30px;
+    border: 1px solid rgba(255,255,255,0.25);
+}
+
+.diferencia-item span {
+    font-size: 35px;
+    color: #d7aa82;
+}
+
+.diferencia-item h3 {
+    font-family: Georgia, serif;
+    font-size: 27px;
+    margin: 15px 0;
+}
+
+.diferencia-item p {
+    color: #e4d9d0;
+}
+
+
+/* ==============================
+   COMO TRABAJAMOS
+================================ */
+
+.proceso {
+    background: white;
+}
+
+.pasos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.paso {
+    border-top: 2px solid #9a6946;
+    padding-top: 20px;
+}
+
+.paso-numero {
+    color: #9a6946;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.paso h3 {
+    font-family: Georgia, serif;
+    font-size: 24px;
+    margin: 12px 0;
+}
+
+.paso p {
+    color: #6d6660;
+}
+
+
+/* ==============================
+   GALERIA
+================================ */
+
+.galeria {
+    background: #eee5da;
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+.galeria-item {
+    overflow: hidden;
+    height: 400px;
+    cursor: pointer;
+}
+
+.galeria-item.pequena {
+    height: 190px;
+}
+
+.galeria-columna {
+    display: grid;
+    gap: 20px;
+}
+
+.galeria-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.galeria-item:hover img {
+    transform: scale(1.05);
+}
+
+
+/* ==============================
+   CONTACTO
+================================ */
+
+.contacto {
+    background: white;
+}
+
+.contacto-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.contacto h2 {
+    font-family: Georgia, serif;
+    font-size: 42px;
+    margin: 15px 0;
+}
+
+.contacto p {
+    color: #6d6660;
+    font-size: 17px;
+}
+
+.datos-contacto {
+    margin-top: 25px;
+    display: grid;
+    gap: 15px;
+}
+
+.datos-contacto a {
+    font-weight: bold;
+    color: #60432f;
+}
+
+.redes {
+    background: #eee5da;
+    padding: 35px;
+    text-align: center;
+}
+
+.redes img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    margin: auto;
+}
+
+.redes h3 {
+    font-family: Georgia, serif;
+    font-size: 26px;
+    margin: 15px 0;
+}
+
+.redes p {
+    margin-bottom: 20px;
+}
+
+
+/* ==============================
+   FOOTER
+================================ */
+
+footer {
+    background: #241c18;
+    color: white;
+    padding: 50px 0 25px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.footer-logo {
+    width: 130px;
+    filter: brightness(0) invert(1);
+}
+
+.footer p {
+    color: #aaa09a;
+    margin-top: 12px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: flex-end;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: #ddd;
+}
+
+.copyright {
+    border-top: 1px solid #3e342e;
+    margin-top: 35px;
+    padding-top: 20px;
+    font-size: 13px;
+}
+
+
+/* ==============================
+   WHATSAPP
+================================ */
+
+.whatsapp {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+
+    width: 58px;
+    height: 58px;
+
+    background: #25d366;
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 25px;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+
+    z-index: 999;
+}
+
+
+/* ==============================
+   RESPONSIVE
+================================ */
+
+@media(max-width: 900px) {
+
+    .nosotros-grid,
+    .contacto-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .productos-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .diferencia-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .pasos {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media(max-width: 650px) {
+
+    .menu {
+        gap: 12px;
+    }
+
+    .inicio h1 {
+        font-size: 50px;
+    }
+
+    .productos-grid,
+    .diferencia-grid,
+    .pasos,
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .galeria-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .galeria-columna {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .galeria-item {
+        height: 300px;
+    }
+
+    .galeria-item.pequena {
+        height: 220px;
+    }
+
+    .footer-links {
+        justify-content: flex-start;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- ==============================
+     MENU
+================================ -->
+
+<header>
+
+<nav class="container">
+
+<a href="#inicio" class="logo">
+<img src="logo.png" alt="Muebles y Más by Cristina">
+</a>
+
+<ul class="menu">
+
+<li>
+<a href="#inicio">Inicio</a>
+</li>
+
+<li>
+<a href="#nosotros">Nosotros</a>
+</li>
+
+<li>
+<a href="#productos">Productos</a>
+</li>
+
+<li>
+<a href="#proceso">Cómo trabajamos</a>
+</li>
+
+<li>
+<a href="#galeria">Galería</a>
+</li>
+
+<li>
+<a href="#contacto">Contacto</a>
+</li>
+
+</ul>
+
+</nav>
+
+</header>
+
+
+<!-- ==============================
+     INICIO
+================================ -->
+
+<section class="inicio" id="inicio">
+
+<div class="container">
+
+<div class="inicio-contenido">
+
+<small>
+Desde el 8 de octubre de 2015
+</small>
+
+<h1>
+Muebles y Más
+<span>by Cristina</span>
+</h1>
+
+<p>
+Creamos muebles por encargo, adaptados a las
+necesidades y gustos de cada cliente, buscando
+siempre ofrecer calidad y confort.
+</p>
+
+<div class="botones">
+
+<a href="#productos" class="boton boton-principal">
+Ver nuestros muebles
+</a>
+
+<a
+href="https://wa.me/18295857104"
+target="_blank"
+class="boton boton-blanco">
+
+Solicitar información
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ==============================
+     NOSOTROS
+================================ -->
+
+<section class="nosotros" id="nosotros">
+
+<div class="container nosotros-grid">
+
+<div class="nosotros-imagen">
+
+<img
+src="sala-1.png"
+alt="Sala de Muebles y Más by Cristina">
+
+<div class="fecha">
+
+Fundada en
+
+<strong>2015</strong>
+
+</div>
+
+</div>
+
+
+<div class="nosotros-texto">
+
+<small>
+Sobre nosotros
+</small>
+
+<h2>
+Creamos muebles pensados para tu espacio.
+</h2>
+
+<p>
+<strong>Muebles y Más by Cristina</strong> fue fundada
+el 8 de octubre del 2015.
+</p>
+
+<p>
+Nos dedicamos a la elaboración de muebles por
+encargo, tomando en cuenta las necesidades,
+gustos y características del espacio de cada cliente.
+</p>
+
+<p>
+Nuestra diferencia está en ofrecer
+<strong>calidad y confort</strong>, buscando que
+cada mueble combine funcionalidad, comodidad
+y buen diseño.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ==============================
+     PRODUCTOS
+================================ -->
+
+<section class="productos" id="productos">
+
+<div class="container">
+
+<div class="titulo">
+
+<small>
+Nuestros productos
+</small>
+
+<h2>
+Muebles hechos para tu hogar
+</h2>
+
+<p>
+Conoce algunos de los trabajos realizados
+por Muebles y Más by Cristina.
+</p>
+
+</div>
+
+
+<div class="productos-grid">
+
+
+<div class="producto">
+
+<div class="producto-imagen">
+
+<img
+src="sala-1.png"
+alt="Sala personalizada">
+
+</div>
+
+<div class="producto-contenido">
+
+<h3>
+Salas
+</h3>
+
+<p>
+Salas elaboradas buscando comodidad,
+calidad y adaptación al espacio.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="producto">
+
+<div class="producto-imagen">
+
+<img
+src="comedor.jpeg"
+alt="Comedor personalizado">
+
+</div>
+
+<div class="producto-contenido">
+
+<h3>
+Comedores
+</h3>
+
+<p>
+Diseños de comedores realizados de acuerdo
+con los gustos y necesidades del cliente.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="producto">
+
+<div class="producto-imagen">
+
+<img
+src="sala-2.jpeg"
+alt="Mueble de sala">
+
+</div>
+
+<div class="producto-contenido">
+
+<h3>
+Diseños por encargo
+</h3>
+
+<p>
+Trabajamos cada proyecto tomando en cuenta
+las medidas y características del espacio.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ==============================
+     DIFERENCIA
+================================ -->
+
+<section class="diferencia">
+
+<div class="container">
+
+<div class="titulo">
+
+<small>
+Nuestra diferencia
+</small>
+
+<h2>
+Calidad y confort en cada proyecto
+</h2>
+
+</div>
+
+
+<div class="diferencia-grid">
+
+
+<div class="diferencia-item">
+
+<span>01</span>
+
+<h3>
+Calidad
+</h3>
+
+<p>
+Trabajamos para ofrecer muebles con buenos
+acabados y pensados para durar.
+</p>
+
+</div>
+
+
+<div class="diferencia-item">
+
+<span>02</span>
+
+<h3>
+Confort
+</h3>
+
+<p>
+Buscamos que cada pieza sea cómoda y
+funcional para el cliente.
+</p>
+
+</div>
+
+
+<div class="diferencia-item">
+
+<span>03</span>
+
+<h3>
+Personalización
+</h3>
+
+<p>
+Cada encargo se adapta a las necesidades
+y gustos de quien lo solicita.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ==============================
+     PROCESO
+================================ -->
+
+<section class="proceso" id="proceso">
+
+<div class="container">
+
+<div class="titulo">
+
+<small>
+Nuestro proceso
+</small>
+
+<h2>
+Trabajamos de acuerdo con tus necesidades
+</h2>
+
+<p>
+Cada proyecto comienza con la idea del cliente.
+</p>
+
+</div>
+
+
+<div class="pasos">
+
+
+<div class="paso">
+
+<div class="paso-numero">
+01
+</div>
+
+<h3>
+Idea
+</h3>
+
+<p>
+Nos cuentas qué tipo de mueble necesitas
+y qué estilo deseas.
+</p>
+
+</div>
+
+
+<div class="paso">
+
+<div class="paso-numero">
+02
+</div>
+
+<h3>
+Diseño
+</h3>
+
+<p>
+Tomamos en cuenta las medidas y
+características del espacio.
+</p>
+
+</div>
+
+
+<div class="paso">
+
+<div class="paso-numero">
+03
+</div>
+
+<h3>
+Fabricación
+</h3>
+
+<p>
+Elaboramos el mueble de acuerdo con
+lo establecido.
+</p>
+
+</div>
+
+
+<div class="paso">
+
+<div class="paso-numero">
+04
+</div>
+
+<h3>
+Entrega
+</h3>
+
+<p>
+Entregamos el resultado final listo
+para formar parte de tu hogar.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ==============================
+     GALERIA
+================================ -->
+
+<section class="galeria" id="galeria">
+
+<div class="container">
+
+<div class="titulo">
+
+<small>
+Galería
+</small>
+
+<h2>
+Algunos de nuestros trabajos
+</h2>
+
+<p>
+Una muestra de nuestros muebles.
+</p>
+
+</div>
+
+
+<div class="galeria-grid">
+
+<div class="galeria-item">
+
+<img
+src="sala-1.png"
+alt="Sala">
+
+</div>
+
+
+<div class="galeria-columna">
+
+<div class="galeria-item pequena">
+
+<img
+src="comedor.jpeg"
+alt="Comedor">
+
+</div>
+
+
+<div class="galeria-item pequena">
+
+<img
+src="sala-2.jpeg"
+alt="Sala">
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ==============================
+     CONTACTO
+================================ -->
+
+<section class="contacto" id="contacto">
+
+<div class="container contacto-grid">
+
+
+<div>
+
+<div class="titulo" style="text-align:left; margin:0;">
+
+<small>
+Contacto
+</small>
+
+<h2>
+¿Tienes un proyecto en mente?
+</h2>
+
+<p>
+Comunícate con nosotros para solicitar
+información sobre nuestros muebles
+por encargo.
+</p>
+
+</div>
+
+
+<div class="datos-contacto">
+
+<a href="tel:+18295857104">
+📞 829 585 7104
+</a>
+
+<a
+href="https://wa.me/18295857104"
+target="_blank">
+
+💬 WhatsApp
+
+</a>
+
+<a
+href="https://www.instagram.com/mueblesymasrdmas/"
+target="_blank">
+
+📷 Instagram: @mueblesymasrdmas
+
+</a>
+
+</div>
+
+</div>
+
+
+<div class="redes">
+
+<img
+src="instagram.png"
+alt="Código QR de Instagram">
+
+<h3>
+Muebles y Más by Cristina
+</h3>
+
+<p>
+Síguenos en Instagram para conocer
+nuestros trabajos.
+</p>
+
+<a
+href="https://www.instagram.com/mueblesymasrdmas/"
+target="_blank"
+class="boton boton-principal">
+
+Visitar Instagram
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ==============================
+     FOOTER
+================================ -->
+
+<footer>
+
+<div class="container footer-grid">
+
+<div>
+
+<img
+src="logo.png"
+alt="Muebles y Más by Cristina"
+class="footer-logo">
+
+<p>
+Calidad y confort para tu hogar.
+</p>
+
+</div>
+
+
+<div class="footer-links">
+
+<a href="#inicio">
+Inicio
+</a>
+
+<a href="#nosotros">
+Nosotros
+</a>
+
+<a href="#productos">
+Productos
+</a>
+
+<a href="#contacto">
+Contacto
+</a>
+
+</div>
+
+</div>
+
+
+<div class="container">
+
+<p class="copyright">
+
+© 2026 Muebles y Más by Cristina.
+Todos los derechos reservados.
+
+</p>
+
+</div>
+
+</footer>
+
+
+<!-- ==============================
+     BOTÓN WHATSAPP
+================================ -->
+
+<a
+href="https://wa.me/18295857104"
+target="_blank"
+class="whatsapp"
+title="WhatsApp">
+
+💬
+
+</a>
+
+
+</body>
+</html>
